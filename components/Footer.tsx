@@ -12,13 +12,13 @@ export default function Footer() {
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-12 h-12 shrink-0 bg-white/10 rounded-lg p-1">
+              <div className="relative w-12 h-12 shrink-0 bg-white/10 rounded-lg p-1" style={{ position: "relative" }}>
                 <Image
                   src="/images/logo.png"
                   alt="Cost & Calculation's"
-                  fill
-                  sizes="48px"
-                  className="object-contain"
+                  width={48}
+                  height={48}
+                  className="object-contain w-full h-full"
                 />
               </div>
               <div className="flex flex-col">

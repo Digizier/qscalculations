@@ -122,8 +122,8 @@ export default function HomePage() {
             </div>
 
             {/* Right Visual Frame */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 bg-white/5 aspect-4/3 sm:aspect-16/11">
+            <div className="lg:col-span-5 relative" style={{ position: "relative" }}>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 bg-white/5 aspect-4/3 sm:aspect-16/11" style={{ position: "relative" }}>
                 <Image
                   src="/images/hero-quantity-surveying.jpg"
                   alt="Quantity Surveying and Cost Estimation Training"
@@ -183,8 +183,8 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-[#F4F7FB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200 aspect-4/3">
+            <div className="lg:col-span-5 relative" style={{ position: "relative" }}>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200 aspect-4/3" style={{ position: "relative" }}>
                 <Image
                   src="/images/boq-estimation.jpg"
                   alt="Bill of Quantities Preparation"
@@ -417,8 +417,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200 aspect-4/3">
+            <div className="lg:col-span-6 relative" style={{ position: "relative" }}>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-200 aspect-4/3" style={{ position: "relative" }}>
                 <Image
                   src="/images/site-inspection.jpg"
                   alt="On-Site Construction Inspection and Cost Control"

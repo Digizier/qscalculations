@@ -69,8 +69,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-white text-[#1F2937] antialiased selection:bg-[#FF8A00] selection:text-white pb-16 lg:pb-0">
+    <html lang="en" suppressHydrationWarning className={`${poppins.variable} ${inter.variable}`}>
+      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-white text-[#1F2937] antialiased selection:bg-[#FF8A00] selection:text-white pb-16 lg:pb-0">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

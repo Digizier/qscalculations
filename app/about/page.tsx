@@ -84,8 +84,8 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-4/3">
+          <div className="lg:col-span-6 relative" style={{ position: "relative" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-4/3" style={{ position: "relative" }}>
               <Image
                 src="/images/hero-quantity-surveying.jpg"
                 alt="Practical Quantity Surveying Training"
@@ -104,7 +104,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-4 flex flex-col items-center text-center">
-                <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-[#1464C0] shadow-lg mb-4 bg-gray-100">
+                <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-[#1464C0] shadow-lg mb-4 bg-gray-100" style={{ position: "relative" }}>
                   <Image
                     src="/images/site-inspection.jpg"
                     alt="Lead Quantity Surveying Instructor"

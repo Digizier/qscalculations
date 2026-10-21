@@ -47,7 +47,7 @@ export default function CertificatePreview() {
         <div className="border-2 border-[#FF8A00]/40 p-6 sm:p-10 md:p-12 rounded-xl relative">
           {/* Subtle Watermark Logo in background */}
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none">
-            <div className="relative w-96 h-96">
+            <div className="relative w-96 h-96" style={{ position: "relative" }}>
               <Image
                 src="/images/logo.png"
                 alt="Watermark"
@@ -67,13 +67,13 @@ export default function CertificatePreview() {
             </div>
 
             {/* Logo */}
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 my-2">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 my-2" style={{ position: "relative" }}>
               <Image
                 src="/images/logo.png"
                 alt="Cost & Calculation's Official Seal"
-                fill
-                sizes="80px"
-                className="object-contain"
+                width={80}
+                height={80}
+                className="object-contain w-full h-full"
               />
             </div>
 
