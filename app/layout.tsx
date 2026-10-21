@@ -42,8 +42,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Cost & Calculation's" }],
   creator: "Cost & Calculation's",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/icon-192.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",
@@ -51,15 +58,21 @@ export const metadata: Metadata = {
     url: "https://qscalculations.com",
     siteName: "Cost & Calculation's",
     title: "Cost & Calculation's | Professional Quantity Surveying & Cost Estimation Training",
-    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings.",
+    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings. WhatsApp 0307-2963487.",
     images: [
       {
-        url: "/images/hero-quantity-surveying.jpg",
+        url: "/images/og-share-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Cost & Calculation's Quantity Surveying Training",
+        alt: "Cost & Calculation's Official Brand Banner & Logo",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cost & Calculation's | Professional Quantity Surveying & Cost Estimation Training",
+    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings. WhatsApp 0307-2963487.",
+    images: ["/images/og-share-banner.jpg"],
   },
 };
 

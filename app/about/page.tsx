@@ -14,7 +14,6 @@ import {
   ArrowRight,
   BookOpen
 } from "lucide-react";
-import CertificatePreview from "@/components/CertificatePreview";
 
 export const metadata: Metadata = {
   title: "About Us & Practical Training Philosophy | Cost & Calculation's",
@@ -87,11 +86,12 @@ export default function AboutPage() {
           <div className="lg:col-span-6 relative" style={{ position: "relative" }}>
             <div className="relative rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-200 aspect-4/3" style={{ position: "relative" }}>
               <Image
-                src="/images/hero-quantity-surveying.jpg"
-                alt="Practical Quantity Surveying Training"
+                src="/images/online-student-mentorship.jpg"
+                alt="Practical Online Engineering Training & Quantity Surveying Studies"
                 fill
                 sizes="(max-width: 1024px) 100vw, 550px"
                 className="object-cover"
+                priority
               />
             </div>
           </div>
@@ -170,9 +170,38 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Interactive Certificate Preview Component */}
+        {/* Official Certificate Image Display */}
         <div className="max-w-4xl mx-auto">
-          <CertificatePreview />
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 sm:border-8 border-[#0B1F3A] bg-[#FCFDFE] p-2 sm:p-4">
+            <div className="relative aspect-4/3 sm:aspect-16/11 w-full overflow-hidden rounded-xl border border-amber-500/30 bg-white shadow-inner" style={{ position: "relative" }}>
+              <Image
+                src="/images/certificate-sample.jpg"
+                alt="Official Certificate of Training Completion - Cost & Calculation's"
+                fill
+                sizes="(max-width: 1024px) 100vw, 850px"
+                className="object-contain"
+                priority
+              />
+            </div>
+            {/* Action & Verification bar below certificate */}
+            <div className="mt-3 sm:mt-4 pt-3 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3 px-2 sm:px-4 text-xs">
+              <div className="flex items-center gap-2 text-gray-600 text-center sm:text-left">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+                <span>
+                  <strong>Official Verifiable Format:</strong> Includes Candidate Name, Course ID, Official Gold Seal &amp; Instructor Signatures.
+                </span>
+              </div>
+              <a
+                href="/images/certificate-sample.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-[#0B1F3A] hover:bg-[#1464C0] text-white font-bold px-4 py-2 rounded-lg transition-colors shrink-0 shadow-xs"
+              >
+                <span>View Full Resolution</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Certificate Validation Criteria */}

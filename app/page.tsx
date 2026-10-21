@@ -45,7 +45,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-b from-[#0B1F3A] to-[#112a4d] text-white pt-8 pb-10 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-[#0B1F3A] to-[#112a4d] text-white pt-10 pb-12 sm:pt-16 sm:pb-16 md:pt-20 md:pb-20 overflow-hidden">
         {/* Subtle engineering grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -59,10 +59,10 @@ export default function HomePage() {
                 <span>Online Engineering Training &amp; Consulting</span>
               </div>
 
-              {/* Main Heading */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              {/* Main Heading - Bold, High-Contrast & Fully Visible */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-white tracking-tight leading-tight">
                 Master Quantity Surveying &amp;{" "}
-                <span className="text-[#FF8A00]">Cost Estimation</span>
+                <span className="text-[#FF8A00] block sm:inline">Cost Estimation</span>
               </h1>
 
               {/* Subheading */}
@@ -120,34 +120,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Visual Frame */}
+            {/* Right Visual Frame - User's Authentic Group Study Image */}
             <div className="lg:col-span-5 relative" style={{ position: "relative" }}>
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 sm:border-4 border-white/10 bg-white/5 aspect-16/10 sm:aspect-16/11 max-h-[300px] sm:max-h-none" style={{ position: "relative" }}>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/20 bg-white/5 aspect-16/11 sm:aspect-4/3" style={{ position: "relative" }}>
                 <Image
-                  src="/images/hero-quantity-surveying.jpg"
-                  alt="Quantity Surveying and Cost Estimation Training"
+                  src="/images/qs-banner-group.jpg"
+                  alt="Quantity Surveying Practice and Practical BOQ Training - Cost & Calculation's"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
+                  sizes="(max-width: 1024px) 100vw, 550px"
                   className="object-cover"
                   priority
                 />
-                {/* Floating Overlay Badge on Desktop */}
-                <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 bg-[#0B1F3A]/90 backdrop-blur-md border border-white/20 p-2.5 sm:p-3 rounded-xl text-white text-xs flex items-center justify-between shadow-lg">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-[#FF8A00] flex items-center justify-center text-white shrink-0">
-                      <FileSpreadsheet className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-white text-[11px] sm:text-xs">Cost &amp; Calculation&apos;s</p>
-                      <p className="text-gray-300 text-[10px]">Practical BOQ &amp; Estimation</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="inline-block bg-[#25D366] text-white font-bold px-2 py-0.5 rounded-sm text-[10px]">
-                      Live Support
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -393,10 +376,10 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-6 relative" style={{ position: "relative" }}>
-              <div className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-16/10 sm:aspect-4/3 max-h-[260px] sm:max-h-none" style={{ position: "relative" }}>
+              <div className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-16/10 sm:aspect-4/3 max-h-[280px] sm:max-h-none" style={{ position: "relative" }}>
                 <Image
-                  src="/images/site-inspection.jpg"
-                  alt="On-Site Construction Inspection and Cost Control"
+                  src="/images/online-student-mentorship.jpg"
+                  alt="Online Engineering Student Mentorship & Drawing Calculation - Cost & Calculation's"
                   fill
                   sizes="(max-width: 1024px) 100vw, 550px"
                   className="object-cover"
@@ -410,38 +393,59 @@ export default function HomePage() {
       {/* CERTIFICATE TEASER SECTION */}
       <section className="py-8 sm:py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-r from-[#0B1F3A] to-[#1464C0] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 text-white shadow-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              <div className="lg:col-span-8 space-y-3">
-                <div className="inline-flex items-center gap-1.5 bg-white/10 text-[#FF8A00] px-3 py-0.5 rounded-full text-[11px] font-bold uppercase">
+          <div className="bg-gradient-to-r from-[#0B1F3A] to-[#1464C0] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 text-white shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="lg:col-span-6 space-y-3 sm:space-y-4">
+                <div className="inline-flex items-center gap-1.5 bg-white/10 text-[#FF8A00] px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                   <Award className="w-3.5 h-3.5" />
                   <span>Verified Practical Recognition</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
                   Earn a Certificate of Training Completion
                 </h2>
-                <p className="text-xs sm:text-sm text-gray-200 leading-relaxed max-w-2xl">
-                  Upon successfully submitting your practical project calculations, Bar Bending Schedules, and complete BOQ assignments, you will be awarded an official Certificate of Training Completion from Cost &amp; Calculation&apos;s.
+                <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                  Upon successfully submitting your practical project calculations, Bar Bending Schedules (BBS), and complete BOQ assignments, you will be awarded an official, verifiable Certificate of Training Completion from <strong>Cost &amp; Calculation&apos;s</strong>.
                 </p>
-                <div className="pt-1">
+                <div className="pt-1 flex flex-wrap items-center gap-3">
                   <Link
                     href="/about#certificate-section"
                     className="inline-flex items-center gap-2 bg-[#FF8A00] hover:bg-[#E07800] text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition-colors shadow-2xs"
                   >
-                    <span>Preview Certificate Sample</span>
+                    <span>View Certificate Full Size</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
+                  <a
+                    href="https://wa.me/923072963487?text=Hello%20Cost%20%26%20Calculation%27s%2C%20I%20would%20like%20to%20know%20more%20about%20the%20training%20certificate."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-colors"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 text-[#25D366] fill-current" />
+                    <span>Inquire on WhatsApp</span>
+                  </a>
                 </div>
               </div>
 
-              <div className="lg:col-span-4 flex justify-center">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white/10 border-2 sm:border-4 border-dashed border-[#FF8A00]/60 p-2 flex flex-col items-center justify-center text-center">
-                  <Award className="w-8 h-8 sm:w-10 sm:h-10 text-[#FF8A00] mb-1" />
-                  <span className="text-[10px] font-extrabold uppercase text-white tracking-wider">
-                    Official Seal
+              {/* Certificate Image Preview Frame */}
+              <div className="lg:col-span-6 flex justify-center">
+                <Link
+                  href="/about#certificate-section"
+                  className="block relative w-full max-w-lg rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-2 sm:border-4 border-amber-400/40 bg-[#FCFDFE] p-1.5 sm:p-2.5 group transition-transform hover:scale-[1.02]"
+                  style={{ position: "relative" }}
+                >
+                  <div className="relative aspect-4/3 sm:aspect-16/11 w-full overflow-hidden rounded-lg bg-white" style={{ position: "relative" }}>
+                    <Image
+                      src="/images/certificate-sample.jpg"
+                      alt="Official Cost & Calculation's Certificate of Training Completion"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 550px"
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="block text-center text-[10px] sm:text-xs text-[#0B1F3A] font-bold mt-1.5 group-hover:text-[#1464C0]">
+                    Official Seal &amp; Instructor Signatures &bull; Click to View &rarr;
                   </span>
-                  <span className="text-[8px] text-gray-300">Verified Competence</span>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

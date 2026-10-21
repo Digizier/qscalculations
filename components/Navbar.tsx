@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Phone, MessageCircle, Menu, X, ArrowRight, GraduationCap } from "lucide-react";
+import { Phone, MessageCircle, Menu, X, ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,35 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-      {/* Top Bar for Desktop and Tablet */}
-      <div className="bg-[#0B1F3A] text-white py-2 px-4 sm:px-6 text-xs md:text-sm">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-2 text-gray-200 text-center sm:text-left">
-            <GraduationCap className="w-4 h-4 text-[#FF8A00] shrink-0 hidden sm:inline" />
-            <span>Online Quantity Surveying, BOQ Preparation & Cost Estimation Training System</span>
-          </div>
-          <div className="flex items-center gap-4 sm:gap-6">
-            <a
-              href="tel:03072963487"
-              className="flex items-center gap-1.5 hover:text-[#FF8A00] transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#FF8A00]" />
-              <span className="font-semibold">0307-2963487</span>
-            </a>
-            <a
-              href="https://wa.me/923072963487?text=Hello%20Cost%20%26%20Calculation%27s%2C%20I%20would%20like%20to%20enquire%20about%20your%20training%20and%20consultancy%20services."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 bg-[#25D366] text-white px-2.5 py-0.5 rounded-full text-xs font-bold hover:bg-[#1EBE5D] transition-colors shadow-xs"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>WhatsApp Us</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
+    <header className="sticky top-0 z-50 bg-white shadow-xs border-b border-gray-100">
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         <div className="flex justify-between items-center h-16 sm:h-20">
@@ -97,6 +69,13 @@ export default function Navbar() {
 
           {/* Right Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="tel:03072963487"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0B1F3A] hover:text-[#1464C0] px-3 py-2 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#FF8A00]" />
+              <span>0307-2963487</span>
+            </a>
             <Link
               href="/courses"
               className="inline-flex items-center gap-2 bg-[#FF8A00] hover:bg-[#E07800] text-white font-bold text-sm px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5"
