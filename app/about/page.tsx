@@ -26,25 +26,25 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Header Banner */}
-      <section className="bg-[#0B1F3A] text-white py-14 sm:py-20 text-center relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-[#FF8A00]/20 text-[#FF8A00] px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-[#FF8A00]/40">
+      <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-16 text-center relative overflow-hidden">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="inline-flex items-center gap-2 bg-[#FF8A00]/20 text-[#FF8A00] px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3 border border-[#FF8A00]/40">
             <ShieldCheck className="w-4 h-4" />
             <span>Engineering Excellence &amp; Education</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
             About Cost &amp; Calculation&apos;s
           </h1>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-300 text-xs sm:text-base leading-relaxed">
             Dedicated to empowering civil engineers, diploma holders, and contractors with practical calculation methods, transparent BOQs, and bulletproof cost controls.
           </p>
         </div>
       </section>
 
       {/* Brand Story & Philosophy */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6">
+      <section className="py-8 sm:py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="lg:col-span-6 space-y-4 sm:space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1464C0]">
               <Target className="w-4 h-4 text-[#FF8A00]" />
               <span>Our Purpose &amp; Mission</span>
@@ -54,29 +54,29 @@ export default function AboutPage() {
               Why We Focus on Practical Construction Math, Not Abstract Theory
             </h2>
 
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <p className="text-gray-700 text-xs sm:text-base leading-relaxed">
               In Pakistan and the Gulf construction markets, the role of a <strong>Quantity Surveyor</strong> is critical. Every cubic foot of concrete, ton of steel rebar, square foot of plaster, and variation claim directly impacts the company’s profit margins.
             </p>
 
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+            <p className="text-gray-700 text-xs sm:text-base leading-relaxed">
               Yet, many engineering graduates and DAE civil students enter the job market without ever having prepared a full, itemized Bill of Quantities (BOQ) or analyzed a real tender document. <strong>Cost &amp; Calculation&apos;s</strong> was founded to bridge this exact industry gap.
             </p>
 
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4F7FB] border border-gray-100">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+            <div className="space-y-2.5 pt-1">
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-[#F4F7FB] border border-gray-100">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-gray-700">
                   <strong>Drawing-Driven:</strong> Every calculation is extracted directly from active architectural, structural, and MEP drawing sets.
                 </span>
               </div>
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4F7FB] border border-gray-100">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-[#F4F7FB] border border-gray-100">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-gray-700">
                   <strong>Contract-Compliant:</strong> Learn to read the fine print in tender conditions, avoid contractor penalties, and validate subcontractor claims.
                 </span>
               </div>
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F4F7FB] border border-gray-100">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 rounded-xl bg-[#F4F7FB] border border-gray-100">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-gray-700">
                   <strong>Practical Tools:</strong> Master Microsoft Excel templates, Bar Bending Schedules (BBS), and standardized measurement formats.
                 </span>
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </div>
 
           <div className="lg:col-span-6 relative" style={{ position: "relative" }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-4/3" style={{ position: "relative" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-gray-200 aspect-4/3" style={{ position: "relative" }}>
               <Image
                 src="/images/hero-quantity-surveying.jpg"
                 alt="Practical Quantity Surveying Training"
@@ -99,43 +99,37 @@ export default function AboutPage() {
       </section>
 
       {/* Instructor & Guidance Section */}
-      <section className="py-16 md:py-20 bg-[#F4F7FB] border-y border-gray-200">
+      <section className="py-8 sm:py-12 md:py-16 bg-[#F4F7FB] border-y border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 border border-gray-200 shadow-sm sm:shadow-md">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
               <div className="md:col-span-4 flex flex-col items-center text-center">
-                <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-[#1464C0] shadow-lg mb-4 bg-gray-100" style={{ position: "relative" }}>
+                <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-[#1464C0] shadow-md mb-3 bg-gray-100" style={{ position: "relative" }}>
                   <Image
                     src="/images/site-inspection.jpg"
                     alt="Lead Quantity Surveying Instructor"
                     fill
-                    sizes="144px"
+                    sizes="(max-width: 640px) 112px, 144px"
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-[#0B1F3A]">Lead Instructor &amp; QS</h3>
-                <p className="text-xs text-[#FF8A00] font-bold uppercase tracking-wider">
+                <h3 className="text-base sm:text-lg font-bold text-[#0B1F3A]">Lead Instructor &amp; QS</h3>
+                <p className="text-[11px] sm:text-xs text-[#FF8A00] font-bold uppercase tracking-wider">
                   Cost &amp; Calculation&apos;s
                 </p>
-                <div className="mt-3">
-                  <a
-                    href="https://wa.me/923072963487?text=Hello%20Sir%2C%20I%20would%20like%20to%20discuss%20the%20Quantity%20Surveying%20course%20with%20you."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#25D366] hover:bg-[#1EBE5D] px-3.5 py-1.5 rounded-full transition-colors"
-                  >
-                    <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                    <span>WhatsApp Direct</span>
-                  </a>
+                <div className="mt-2.5">
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#0B1F3A] bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">
+                    <span>1-on-1 Drawing Guidance</span>
+                  </span>
                 </div>
               </div>
 
-              <div className="md:col-span-8 space-y-4">
+              <div className="md:col-span-8 space-y-3 sm:space-y-4">
                 <div className="inline-flex items-center gap-2 text-xs font-bold text-[#1464C0] uppercase tracking-wider">
                   <HardHat className="w-4 h-4 text-[#FF8A00]" />
                   <span>Real Field Experience</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#0B1F3A]">
+                <h3 className="text-lg sm:text-2xl font-bold text-[#0B1F3A]">
                   Direct Mentorship from Practicing Industry Professionals
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
@@ -144,14 +138,14 @@ export default function AboutPage() {
                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                   We do not believe in automated, impersonal video libraries where students get stuck. Every student is connected directly with the instructor via WhatsApp to review their calculation sheets, correct takeoff errors, and discuss live site problems.
                 </p>
-                <div className="pt-2 flex flex-wrap gap-3">
-                  <span className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-md font-medium">
+                <div className="pt-1 flex flex-wrap gap-2 sm:gap-2.5">
+                  <span className="text-[11px] sm:text-xs bg-gray-100 text-gray-700 px-2.5 py-1 rounded-md font-medium">
                     &bull; 100% Practical Drawing Takeoffs
                   </span>
-                  <span className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-md font-medium">
+                  <span className="text-[11px] sm:text-xs bg-gray-100 text-gray-700 px-2.5 py-1 rounded-md font-medium">
                     &bull; Automated Excel Templates Provided
                   </span>
-                  <span className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-md font-medium">
+                  <span className="text-[11px] sm:text-xs bg-gray-100 text-gray-700 px-2.5 py-1 rounded-md font-medium">
                     &bull; Real Tender Documents Dissected
                   </span>
                 </div>
@@ -162,8 +156,8 @@ export default function AboutPage() {
       </section>
 
       {/* CERTIFICATE SECTION */}
-      <section id="certificate-section" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-20">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+      <section id="certificate-section" className="py-8 sm:py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 scroll-mt-20">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 space-y-2">
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF8A00]">
             <Award className="w-4 h-4" />
             <span>Formal Training Credential</span>
@@ -171,7 +165,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B1F3A] tracking-tight">
             Certificate of Training Completion
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-600 text-xs sm:text-base leading-relaxed">
             Demonstrate your practical competence to prospective employers in Pakistan and overseas. Below is an interactive preview of the certificate awarded upon project submission.
           </p>
         </div>
@@ -182,8 +176,8 @@ export default function AboutPage() {
         </div>
 
         {/* Certificate Validation Criteria */}
-        <div className="max-w-4xl mx-auto mt-12 p-6 rounded-2xl bg-gray-50 border border-gray-200">
-          <h3 className="font-bold text-sm text-[#0B1F3A] mb-2 flex items-center gap-2">
+        <div className="max-w-4xl mx-auto mt-6 sm:mt-10 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gray-50 border border-gray-200">
+          <h3 className="font-bold text-xs sm:text-sm text-[#0B1F3A] mb-2.5 flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#1464C0]" />
             <span>Certificate Award Criteria:</span>
           </h3>
@@ -209,20 +203,20 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Bottom Banner */}
-      <section className="bg-[#0B1F3A] text-white py-14">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
+      <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-14">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-3 sm:space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
             Ready to Begin Your Quantity Surveying Training?
           </h2>
-          <p className="text-gray-300 text-sm max-w-xl mx-auto">
+          <p className="text-gray-300 text-xs sm:text-sm max-w-xl mx-auto">
             Contact us today on WhatsApp at <strong>0307-2963487</strong> to reserve your seat in the upcoming batch.
           </p>
-          <div className="pt-2">
+          <div className="pt-1 sm:pt-2">
             <a
               href="https://wa.me/923072963487?text=Hello%20Cost%20%26%20Calculation%27s%2C%20I%20would%20like%20to%20enroll%20in%20your%20training%20program."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#FF8A00] hover:bg-[#E07800] text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#FF8A00] hover:bg-[#E07800] text-white font-bold text-xs sm:text-sm px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl shadow-md transition-all"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               <span>Contact Us on WhatsApp</span>

@@ -7,16 +7,14 @@ import {
   CheckCircle2,
   ArrowRight,
   MessageCircle,
-  FileSpreadsheet,
   Check,
   ChevronRight,
   Laptop,
   Award,
-  HelpCircle,
   ShieldCheck,
   BookOpen
 } from "lucide-react";
-import { COURSES, Course } from "@/data/courses";
+import { COURSES } from "@/data/courses";
 import WhatsAppForm from "@/components/WhatsAppForm";
 
 interface CoursePageProps {
@@ -60,82 +58,65 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
   return (
     <div className="bg-white min-h-screen">
       {/* Breadcrumbs */}
-      <div className="bg-[#F4F7FB] border-b border-gray-200 py-3">
+      <div className="bg-[#F4F7FB] border-b border-gray-200 py-2.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center gap-2 text-xs text-gray-500 overflow-x-auto whitespace-nowrap">
+          <nav className="flex items-center gap-1.5 text-[11px] sm:text-xs text-gray-500 overflow-x-auto whitespace-nowrap">
             <Link href="/" className="hover:text-[#0B1F3A]">
               Home
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-3 h-3" />
             <Link href="/courses" className="hover:text-[#0B1F3A]">
-              Courses &amp; Training
+              Courses
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#0B1F3A] font-semibold">{course.title}</span>
+            <ChevronRight className="w-3 h-3" />
+            <span className="text-[#0B1F3A] font-semibold truncate max-w-[200px] sm:max-w-none">{course.title}</span>
           </nav>
         </div>
       </div>
 
       {/* Course Hero Banner */}
-      <section className="bg-[#0B1F3A] text-white py-12 md:py-16">
+      <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 bg-[#FF8A00]/20 text-[#FF8A00] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-[#FF8A00]/40">
-              <GraduationCap className="w-4 h-4" />
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
+            <div className="inline-flex items-center gap-1.5 bg-[#FF8A00]/20 text-[#FF8A00] px-3 py-0.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider border border-[#FF8A00]/40">
+              <GraduationCap className="w-3.5 h-3.5" />
               <span>{course.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
               {course.title}
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-300 italic">
+            <p className="text-xs sm:text-sm md:text-base text-gray-300 italic">
               {course.subtitle}
             </p>
 
-            <p className="text-sm sm:text-base text-gray-200 leading-relaxed pt-2">
+            <p className="text-xs sm:text-sm text-gray-200 leading-relaxed pt-1">
               {course.shortDescription}
             </p>
-
-            <div className="pt-4 flex flex-wrap gap-4">
-              <a
-                href={`https://wa.me/923072963487?text=${encodeURIComponent(
-                  `Hello Cost & Calculation's, I am interested in enrolling in: ${course.title}. Please provide batch timings and fee details.`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Enquire for This Course on WhatsApp</span>
-              </a>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Main Content Layout */}
-      <section className="py-14 md:py-20 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="py-8 sm:py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Main Column (8 cols) */}
-          <div className="lg:col-span-8 space-y-12">
-            {/* Learning Outcomes */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-[#0B1F3A] flex items-center gap-2">
-                <CheckCircle2 className="w-6 h-6 text-[#1464C0]" />
-                <span>What You Will Master in This Course</span>
+          <div className="lg:col-span-8 space-y-8 sm:space-y-10">
+            {/* Learning Outcomes - 2 Columns on Mobile! */}
+            <div className="space-y-3">
+              <h2 className="text-lg sm:text-xl font-bold text-[#0B1F3A] flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-[#1464C0]" />
+                <span>What You Will Master</span>
               </h2>
-              <p className="text-sm text-gray-600">
-                This curriculum focuses 100% on practical calculations required on active civil engineering and contracting jobsites:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-1">
                 {course.learningOutcomes.map((outcome, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-gray-50 border border-gray-200 flex items-start gap-2.5"
+                    className="p-2.5 sm:p-3.5 rounded-xl bg-gray-50 border border-gray-200 flex items-start gap-1.5"
                   >
-                    <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-700 font-medium">
+                    <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-[11px] sm:text-xs text-gray-700 font-medium leading-snug">
                       {outcome}
                     </span>
                   </div>
@@ -144,29 +125,27 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
             </div>
 
             {/* Detailed Module Breakdown */}
-            <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-[#0B1F3A] flex items-center gap-2">
-                <BookOpen className="w-6 h-6 text-[#1464C0]" />
-                <span>Detailed Course Modules &amp; Syllabus</span>
+            <div className="space-y-4">
+              <h2 className="text-lg sm:text-xl font-bold text-[#0B1F3A] flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-[#1464C0]" />
+                <span>Modules &amp; Syllabus</span>
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {course.modules.map((mod) => (
                   <div
                     key={mod.number}
-                    className="bg-white rounded-2xl border border-gray-200 p-6 shadow-2xs hover:border-[#1464C0] transition-colors"
+                    className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 shadow-2xs hover:border-[#1464C0] transition-colors"
                   >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-bold text-[#FF8A00] uppercase tracking-wider">
-                        {mod.number}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-[#0B1F3A] mb-3">
+                    <span className="text-[10px] font-bold text-[#FF8A00] uppercase tracking-wider">
+                      {mod.number}
+                    </span>
+                    <h3 className="text-sm sm:text-base font-bold text-[#0B1F3A] mb-2">
                       {mod.title}
                     </h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-gray-600">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-gray-600">
                       {mod.topics.map((topic, tIdx) => (
-                        <li key={tIdx} className="flex items-start gap-2">
+                        <li key={tIdx} className="flex items-start gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#1464C0] shrink-0 mt-1.5"></span>
                           <span>{topic}</span>
                         </li>
@@ -177,50 +156,50 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
               </div>
             </div>
 
-            {/* Target Audience */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-[#0B1F3A]">
-                Who Should Enroll in This Course?
+            {/* Target Audience - 2 Columns on Mobile! */}
+            <div className="space-y-3">
+              <h2 className="text-lg sm:text-xl font-bold text-[#0B1F3A]">
+                Who Should Enroll?
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
                 {course.targetAudience.map((aud, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-[#F4F7FB] border border-gray-200 text-xs sm:text-sm text-gray-700 font-medium flex items-center gap-2.5"
+                    className="p-2.5 sm:p-3 rounded-xl bg-[#F4F7FB] border border-gray-200 text-[11px] sm:text-xs text-gray-700 font-medium flex items-center gap-2"
                   >
-                    <div className="w-2 h-2 rounded-full bg-[#FF8A00] shrink-0"></div>
-                    <span>{aud}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF8A00] shrink-0"></div>
+                    <span className="line-clamp-2">{aud}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Prerequisites & Software */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="p-6 rounded-2xl bg-white border border-gray-200">
-                <h3 className="text-base font-bold text-[#0B1F3A] mb-3 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#1464C0]" />
+            {/* Prerequisites & Software - 2 Columns on Mobile! */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="p-4 rounded-xl bg-white border border-gray-200">
+                <h3 className="text-xs sm:text-sm font-bold text-[#0B1F3A] mb-2 flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[#1464C0]" />
                   <span>Prerequisites</span>
                 </h3>
-                <ul className="space-y-2 text-xs text-gray-600">
+                <ul className="space-y-1.5 text-[11px] sm:text-xs text-gray-600">
                   {course.prerequisites.map((p, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-1.5">
+                      <Check className="w-3 h-3 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{p}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white border border-gray-200">
-                <h3 className="text-base font-bold text-[#0B1F3A] mb-3 flex items-center gap-2">
-                  <Laptop className="w-5 h-5 text-[#1464C0]" />
-                  <span>Tools &amp; Software Covered</span>
+              <div className="p-4 rounded-xl bg-white border border-gray-200">
+                <h3 className="text-xs sm:text-sm font-bold text-[#0B1F3A] mb-2 flex items-center gap-1.5">
+                  <Laptop className="w-4 h-4 text-[#1464C0]" />
+                  <span>Tools Covered</span>
                 </h3>
-                <ul className="space-y-2 text-xs text-gray-600">
+                <ul className="space-y-1.5 text-[11px] sm:text-xs text-gray-600">
                   {course.softwareCovered.map((s, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-1.5">
+                      <Check className="w-3 h-3 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{s}</span>
                     </li>
                   ))}
@@ -229,7 +208,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
             </div>
 
             {/* Interactive WhatsApp Form */}
-            <div className="pt-6">
+            <div className="pt-4">
               <WhatsAppForm
                 defaultCourseOrService={course.title}
                 defaultEnquiryType="Course Information"
@@ -238,59 +217,50 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           </div>
 
           {/* Sidebar (4 cols) */}
-          <div className="lg:col-span-4 space-y-6">
-            {/* Quick Facts Card */}
-            <div className="bg-[#F4F7FB] rounded-2xl border border-gray-200 p-6 space-y-5 sticky top-28">
-              <h3 className="text-lg font-bold text-[#0B1F3A] pb-3 border-b border-gray-200">
+          <div className="lg:col-span-4 space-y-4">
+            <div className="bg-[#F4F7FB] rounded-2xl border border-gray-200 p-4 sm:p-5 space-y-4 sticky top-24">
+              <h3 className="text-base font-bold text-[#0B1F3A] pb-2 border-b border-gray-200">
                 Course Summary
               </h3>
 
-              <div className="space-y-3.5 text-xs sm:text-sm">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-2.5 sm:gap-3 text-xs">
                 <div>
-                  <span className="block text-gray-500 text-xs">Training Track:</span>
+                  <span className="block text-gray-500 text-[10px] uppercase tracking-wider">Track:</span>
                   <span className="font-bold text-[#0B1F3A]">{course.badge}</span>
                 </div>
                 <div>
-                  <span className="block text-gray-500 text-xs">Learning Mode:</span>
-                  <span className="font-bold text-[#0B1F3A]">Online Training System (Nationwide &amp; Gulf)</span>
+                  <span className="block text-gray-500 text-[10px] uppercase tracking-wider">Mode:</span>
+                  <span className="font-bold text-[#0B1F3A]">Online Practical</span>
                 </div>
                 <div>
-                  <span className="block text-gray-500 text-xs">Language of Instruction:</span>
-                  <span className="font-bold text-[#0B1F3A]">Urdu / English (Technical Terms)</span>
+                  <span className="block text-gray-500 text-[10px] uppercase tracking-wider">Language:</span>
+                  <span className="font-bold text-[#0B1F3A]">Urdu / English</span>
                 </div>
                 <div>
-                  <span className="block text-gray-500 text-xs">Calculations Basis:</span>
-                  <span className="font-bold text-[#0B1F3A]">Real Architectural &amp; Structural Drawings</span>
-                </div>
-                <div>
-                  <span className="block text-gray-500 text-xs">Certification:</span>
-                  <span className="font-bold text-emerald-700 flex items-center gap-1 mt-0.5">
-                    <Award className="w-4 h-4" />
-                    <span>Certificate of Training Completion</span>
+                  <span className="block text-gray-500 text-[10px] uppercase tracking-wider">Certification:</span>
+                  <span className="font-bold text-emerald-700 flex items-center gap-1">
+                    <Award className="w-3.5 h-3.5" />
+                    <span>Included</span>
                   </span>
-                </div>
-                <div>
-                  <span className="block text-gray-500 text-xs">Mentor Support:</span>
-                  <span className="font-bold text-[#0B1F3A]">Direct 1-on-1 WhatsApp Access</span>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-gray-200 space-y-2.5">
+              <div className="pt-2 border-t border-gray-200 space-y-2">
                 <a
                   href={`https://wa.me/923072963487?text=${encodeURIComponent(
                     `Hello Cost & Calculation's, I want to get the fee and admission details for: ${course.title}.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm py-3 px-4 rounded-xl shadow-xs transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm py-2.5 px-4 rounded-xl shadow-xs transition-colors"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>Enquire via WhatsApp</span>
+                  <span>Enquire for This Course</span>
                 </a>
 
                 <a
                   href="tel:03072963487"
-                  className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-[#0B1F3A] border border-gray-300 font-bold text-sm py-3 px-4 rounded-xl transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-[#0B1F3A] border border-gray-300 font-bold text-xs sm:text-sm py-2.5 px-4 rounded-xl transition-colors"
                 >
                   <span>Call: 0307-2963487</span>
                 </a>

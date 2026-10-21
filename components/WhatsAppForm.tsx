@@ -90,14 +90,14 @@ Thank you.`;
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 md:p-10">
-      <div className="mb-6 pb-6 border-b border-gray-100 flex items-center gap-3">
-        <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-[#25D366] shrink-0">
-          <MessageCircle className="w-6 h-6 fill-current" />
+    <div className="bg-white rounded-2xl shadow-lg sm:shadow-xl border border-gray-100 p-4 sm:p-8 md:p-10">
+      <div className="mb-4 pb-4 sm:mb-6 sm:pb-6 border-b border-gray-100 flex items-center gap-3">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-green-50 flex items-center justify-center text-[#25D366] shrink-0">
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-[#0B1F3A]">Quick WhatsApp Enquiry Form</h3>
-          <p className="text-xs sm:text-sm text-gray-500">
+          <h3 className="text-lg sm:text-xl font-bold text-[#0B1F3A]">Quick WhatsApp Enquiry Form</h3>
+          <p className="text-[11px] sm:text-sm text-gray-500">
             Fill in your details below to generate an instant enquiry sent directly to our official WhatsApp.
           </p>
         </div>
@@ -115,7 +115,7 @@ Thank you.`;
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-5" noValidate>
         {/* Full Name */}
         <div>
           <label className="block text-xs sm:text-sm font-bold text-[#0B1F3A] mb-1.5">
@@ -278,12 +278,12 @@ Thank you.`;
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 bg-[#FF8A00] hover:bg-[#E07800] text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-md hover:shadow-lg transition-all transform active:scale-98 disabled:opacity-70 cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 bg-[#FF8A00] hover:bg-[#E07800] text-white font-bold text-sm sm:text-base py-3 sm:py-3.5 px-6 rounded-xl shadow-md hover:shadow-lg transition-all transform active:scale-98 disabled:opacity-70 cursor-pointer"
           >
-            <Send className="w-5 h-5" />
+            <Send className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>{isSubmitting ? "Generating WhatsApp Message..." : "Send Enquiry on WhatsApp"}</span>
           </button>
-          <p className="text-center text-xs text-gray-500 mt-2.5">
+          <p className="text-center text-[11px] sm:text-xs text-gray-500 mt-2">
             Safe &amp; Direct: Clicking will open your WhatsApp application with your enquiry pre-filled.
           </p>
         </div>

@@ -54,25 +54,25 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo & Brand Name */}
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 transition-transform group-hover:scale-105" style={{ position: "relative" }}>
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <div className="relative w-10 h-10 sm:w-14 sm:h-14 shrink-0 transition-transform group-hover:scale-105" style={{ position: "relative" }}>
               <Image
                 src="/images/logo.png"
                 alt="Cost & Calculation's Logo"
                 width={56}
                 height={56}
-                className="object-contain w-12 h-12 sm:w-14 sm:h-14"
+                className="object-contain w-10 h-10 sm:w-14 sm:h-14"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-lg sm:text-xl md:text-2xl text-[#0B1F3A] tracking-tight leading-tight">
+              <span className="font-extrabold text-base sm:text-xl md:text-2xl text-[#0B1F3A] tracking-tight leading-tight">
                 Cost &amp; Calculation<span className="text-[#FF8A00]">&apos;s</span>
               </span>
-              <span className="text-[11px] sm:text-xs text-gray-500 font-medium tracking-normal hidden xs:inline">
+              <span className="text-[10px] sm:text-xs text-gray-500 font-medium tracking-normal hidden xs:inline">
                 Quantity Surveying &amp; Estimation
               </span>
             </div>

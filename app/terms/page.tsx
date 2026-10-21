@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="bg-white min-h-screen py-16 md:py-20">
+    <div className="bg-white min-h-screen py-8 sm:py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1464C0] hover:underline mb-8"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1464C0] hover:underline mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
         </Link>
 
-        <div className="space-y-4 mb-10 pb-8 border-b border-gray-200">
+        <div className="space-y-3 mb-6 sm:mb-8 pb-6 border-b border-gray-200">
           <div className="inline-flex items-center gap-2 text-xs font-bold text-[#FF8A00] uppercase tracking-wider">
             <FileText className="w-4 h-4" />
             <span>Service Agreement</span>
