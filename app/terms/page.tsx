@@ -76,7 +76,7 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-[#0B1F3A]">5. Governing Law &amp; Inquiries</h2>
             <p>
-              These terms are governed by the laws of Pakistan. For any contractual queries or clarification, please reach us directly via WhatsApp at <strong>0307-2963487</strong> or email <strong>info@qscalculations.com</strong>.
+              These terms are governed by the laws of Pakistan. For any contractual queries or clarification, please reach us directly via WhatsApp at <strong>0307-2963487</strong> or email <a href="mailto:costcalculations2026@gmail.com" className="font-bold underline text-[#1464C0]">costcalculations2026@gmail.com</a>.
             </p>
           </section>
         </div>

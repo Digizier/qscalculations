@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-[#0B1F3A]">5. Contact Us Regarding Privacy</h2>
             <p>
-              If you have any questions regarding this Privacy Policy, please contact our administrative team via WhatsApp or telephone at <strong>0307-2963487</strong> or via email at <strong>info@qscalculations.com</strong>.
+              If you have any questions regarding this Privacy Policy, please contact our administrative team via WhatsApp or telephone at <strong>0307-2963487</strong> or via email at <a href="mailto:costcalculations2026@gmail.com" className="font-bold underline text-[#1464C0]">costcalculations2026@gmail.com</a>.
             </p>
           </section>
         </div>

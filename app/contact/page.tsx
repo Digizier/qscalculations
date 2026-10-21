@@ -101,22 +101,25 @@ export default function ContactPage() {
               </a>
 
               {/* Email Card */}
-              <div className="flex flex-col justify-between p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-gray-200">
+              <a
+                href="mailto:costcalculations2026@gmail.com"
+                className="flex flex-col justify-between p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xs transition-all group"
+              >
                 <div>
-                  <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-blue-50 text-[#1464C0] flex items-center justify-center shrink-0 mb-2">
+                  <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-blue-50 text-[#1464C0] flex items-center justify-center shrink-0 mb-2 group-hover:scale-105 transition-transform">
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <span className="text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-wider block">
                     Official Email
                   </span>
-                  <p className="text-[11px] sm:text-sm font-bold text-[#0B1F3A] mt-0.5 truncate" title="info@qscalculations.com">
-                    info@qscalculations.com
+                  <p className="text-[11px] sm:text-sm font-bold text-[#0B1F3A] mt-0.5 truncate group-hover:text-[#1464C0]" title="costcalculations2026@gmail.com">
+                    costcalculations2026@gmail.com
                   </p>
                 </div>
                 <p className="text-[10px] sm:text-xs text-gray-500 mt-1 hidden sm:block">
                   For formal proposals &amp; RFPs.
                 </p>
-              </div>
+              </a>
 
               {/* Location Card */}
               <div className="flex flex-col justify-between p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-gray-200">

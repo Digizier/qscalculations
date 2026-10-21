@@ -60,9 +60,9 @@ export default function HomePage() {
               </div>
 
               {/* Main Heading - Bold, High-Contrast & Fully Visible */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                Master Quantity Surveying &amp;{" "}
-                <span className="text-[#FF8A00] block sm:inline">Cost Estimation</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-tight" style={{ color: "#FFFFFF" }}>
+                <span className="text-white" style={{ color: "#FFFFFF" }}>Master Quantity Surveying &amp;</span>{" "}
+                <span className="text-[#FF8A00] block sm:inline" style={{ color: "#FF8A00" }}>Cost Estimation</span>
               </h1>
 
               {/* Subheading */}

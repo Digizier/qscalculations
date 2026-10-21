@@ -146,8 +146,8 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#FF8A00] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-gray-400 uppercase tracking-wider">Email</span>
-                  <a href="mailto:info@qscalculations.com" className="hover:text-[#FF8A00] truncate block max-w-[150px] sm:max-w-none">
-                    info@qscalculations.com
+                  <a href="mailto:costcalculations2026@gmail.com" className="hover:text-[#FF8A00] truncate block max-w-[150px] sm:max-w-none">
+                    costcalculations2026@gmail.com
                   </a>
                 </div>
               </div>
