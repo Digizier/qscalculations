@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-navy: #0B1F3A;
+  --secondary-blue: #1464C0;
+  --accent-orange: #FF8A00;
+  --accent-orange-hover: #E07800;
+  --neutral-bg: #F4F7FB;
+  --text-dark: #1F2937;
+  --text-muted: #4B5563;
+  --border-light: #E5E7EB;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: var(--text-dark);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  color: var(--primary-navy);
+}
+
+/* Custom utility colors */
+.bg-navy {
+  background-color: #0B1F3A;
+}
+
+.text-navy {
+  color: #0B1F3A;
+}
+
+.bg-blue-brand {
+  background-color: #1464C0;
+}
+
+.text-blue-brand {
+  color: #1464C0;
+}
+
+.bg-orange-brand {
+  background-color: #FF8A00;
+}
+
+.text-orange-brand {
+  color: #FF8A00;
+}
+
+.bg-light-neutral {
+  background-color: #F4F7FB;
+}
+
+/* Pulsing effect for WhatsApp button */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
