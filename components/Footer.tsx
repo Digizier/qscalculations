@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Col 1: Brand Info */}
           <div className="space-y-3 md:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-11 h-11 shrink-0 bg-white/10 rounded-lg p-1" style={{ position: "relative" }}>
+              <div className="relative w-12 h-12 shrink-0 bg-white rounded-xl p-1 shadow-xs" style={{ position: "relative" }}>
                 <Image
                   src="/images/logo.png"
                   alt="Cost & Calculation's"

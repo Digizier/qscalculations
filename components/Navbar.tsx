@@ -30,13 +30,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo & Brand Name */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-            <div className="relative w-10 h-10 sm:w-14 sm:h-14 shrink-0 transition-transform group-hover:scale-105" style={{ position: "relative" }}>
+            <div className="relative w-11 h-11 sm:w-14 sm:h-14 shrink-0 transition-transform group-hover:scale-105" style={{ position: "relative" }}>
               <Image
                 src="/images/logo.png"
-                alt="Cost & Calculation's Logo"
+                alt="Cost & Calculation's Official Logo"
                 width={56}
                 height={56}
-                className="object-contain w-10 h-10 sm:w-14 sm:h-14"
+                className="object-contain w-11 h-11 sm:w-14 sm:h-14"
                 priority
               />
             </div>

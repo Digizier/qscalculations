@@ -61,9 +61,14 @@ export default function HomePage() {
 
               {/* Main Heading - Bold, High-Contrast & Fully Visible */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-tight" style={{ color: "#FFFFFF" }}>
-                <span className="text-white" style={{ color: "#FFFFFF" }}>Master Quantity Surveying &amp;</span>{" "}
+                <span className="text-white" style={{ color: "#FFFFFF" }}>Quantity Surveying &amp;</span>{" "}
                 <span className="text-[#FF8A00] block sm:inline" style={{ color: "#FF8A00" }}>Cost Estimation</span>
               </h1>
+              <div className="inline-block pt-1 pb-0.5">
+                <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-[#FF8A00] tracking-wider uppercase bg-[#FF8A00]/15 border border-[#FF8A00]/30 px-3 py-1 rounded-lg">
+                  Training &amp; Consultancy
+                </span>
+              </div>
 
               {/* Subheading */}
               <p className="text-xs sm:text-sm md:text-base text-gray-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
@@ -120,12 +125,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Visual Frame - User's Authentic Group Study Image */}
+            {/* Right Visual Frame - Practical Online Student Mentorship */}
             <div className="lg:col-span-5 relative" style={{ position: "relative" }}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/20 bg-white/5 aspect-16/11 sm:aspect-4/3" style={{ position: "relative" }}>
                 <Image
-                  src="/images/qs-banner-group.jpg"
-                  alt="Quantity Surveying Practice and Practical BOQ Training - Cost & Calculation's"
+                  src="/images/online-student-mentorship.jpg"
+                  alt="Online Engineering Student Mentorship & Drawing Calculation - Cost & Calculation's"
                   fill
                   sizes="(max-width: 1024px) 100vw, 550px"
                   className="object-cover"
@@ -378,8 +383,8 @@ export default function HomePage() {
             <div className="lg:col-span-6 relative" style={{ position: "relative" }}>
               <div className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-16/10 sm:aspect-4/3 max-h-[280px] sm:max-h-none" style={{ position: "relative" }}>
                 <Image
-                  src="/images/online-student-mentorship.jpg"
-                  alt="Online Engineering Student Mentorship & Drawing Calculation - Cost & Calculation's"
+                  src="/images/qs-banner-group.jpg"
+                  alt="Quantity Surveying Practice, Plan Takeoff & Cost Consultancy Group - Cost & Calculation's"
                   fill
                   sizes="(max-width: 1024px) 100vw, 550px"
                   className="object-cover"
