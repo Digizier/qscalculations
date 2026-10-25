@@ -6,7 +6,10 @@ import { FileText, ArrowLeft } from "lucide-react";
 export const metadata: Metadata = {
   title: "Terms & Conditions | Cost & Calculation's",
   description:
-    "Terms & Conditions governing training courses and consultancy services provided by Cost & Calculation's (QSCalculations.com).",
+    "Terms & Conditions governing training courses and consultancy services provided by Cost & Calculation's (CostCalculations.org).",
+  alternates: {
+    canonical: "https://costcalculations.org/terms",
+  },
 };
 
 export default function TermsPage() {
@@ -30,7 +33,7 @@ export default function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-xs text-gray-500">
-            Effective Date: January 2026 &bull; Domain: QSCalculations.com
+            Effective Date: January 2026 &bull; Domain: CostCalculations.org
           </p>
         </div>
 
@@ -38,7 +41,7 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-[#0B1F3A]">1. Agreement to Terms</h2>
             <p>
-              By accessing and using <strong>QSCalculations.com</strong> or enrolling in courses and consultancy services offered by <strong>Cost &amp; Calculation&apos;s</strong>, you agree to comply with and be bound by the following terms and conditions.
+              By accessing and using <strong>CostCalculations.org</strong> or enrolling in courses and consultancy services offered by <strong>Cost &amp; Calculation&apos;s</strong>, you agree to comply with and be bound by the following terms and conditions.
             </p>
           </section>
 

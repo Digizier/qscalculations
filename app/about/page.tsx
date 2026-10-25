@@ -14,16 +14,27 @@ import {
   ArrowRight,
   BookOpen
 } from "lucide-react";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbSchema, BASE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About Us & Practical Training Philosophy | Cost & Calculation's",
+  title: "About Us & Engineering Training Philosophy | Cost & Calculation's",
   description:
     "Learn about Cost & Calculation's, our online engineering training system, instructor background, and authentic certificate of completion.",
+  alternates: {
+    canonical: "https://costcalculations.org/about",
+  },
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: BASE_URL },
+    { name: "About Us", url: `${BASE_URL}/about` },
+  ]);
+
   return (
     <div className="bg-white">
+      <JsonLd data={breadcrumbSchema} />
       {/* Header Banner */}
       <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-16 text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">

@@ -5,6 +5,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import JsonLd from "@/components/JsonLd";
+import {
+  getOrganizationSchema,
+  getWebSiteSchema,
+  getSiteNavigationSchema,
+} from "@/lib/schema";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
@@ -21,26 +27,36 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://qscalculations.com"),
+  metadataBase: new URL("https://costcalculations.org"),
+  alternates: {
+    canonical: "https://costcalculations.org",
+  },
   title: {
-    default: "Cost & Calculation's | Online Quantity Surveying & Cost Estimation Course",
+    default: "Cost & Calculation's | Practical Quantity Surveying & Cost Estimation Course Karachi",
     template: "%s | Cost & Calculation's",
   },
   description:
-    "Online Engineering Training System & Consulting for Quantity Surveying, BOQ Preparation, Construction Cost Estimation, Tender Analysis, EVM, and Cost Control. WhatsApp 0307-2963487.",
+    "Online Engineering Training System & Consulting for Quantity Surveying, BOQ Preparation, Construction Cost Estimation, Tender Analysis, EVM, and Cost Control. Karachi Hub. WhatsApp 0307-2963487.",
   keywords: [
     "Quantity Surveyor Course in Karachi",
     "Quantity Surveyor Course in Rawalpindi Islamabad",
     "Online Quantity Surveying Course Pakistan",
     "BOQ Preparation Training",
-    "Construction Cost Estimation",
+    "Construction Cost Estimation Course",
     "Earned Value Management EVM",
     "Cost Breakdown Structure CBS",
-    "Subcontractor Claims and Payments",
-    "Quantity Surveying Consultancy Pakistan"
+    "Subcontractor Claims and IPC Payments",
+    "Quantity Surveying Consultancy Pakistan",
+    "Civil Engineering Rate Analysis",
+    "Building Plan Takeoff Training",
+    "DAE Civil Estimation Course",
+    "Cost Calculations Pakistan",
+    "CostCalculations.org",
+    "Cost & Calculation's"
   ],
-  authors: [{ name: "Cost & Calculation's" }],
+  authors: [{ name: "Cost & Calculation's", url: "https://costcalculations.org" }],
   creator: "Cost & Calculation's",
+  publisher: "Cost & Calculation's",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -55,13 +71,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_PK",
-    url: "https://qscalculations.com",
+    url: "https://costcalculations.org",
     siteName: "Cost & Calculation's",
     title: "Cost & Calculation's | Professional Quantity Surveying & Cost Estimation Training",
-    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings. WhatsApp 0307-2963487.",
+    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings. Karachi Hub. WhatsApp 0307-2963487.",
     images: [
       {
-        url: "/images/og-share-banner.jpg",
+        url: "https://costcalculations.org/images/og-share-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Cost & Calculation's Official Brand Banner & Logo",
@@ -71,8 +87,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cost & Calculation's | Professional Quantity Surveying & Cost Estimation Training",
-    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings. WhatsApp 0307-2963487.",
-    images: ["/images/og-share-banner.jpg"],
+    description: "Learn practical BOQ preparation, construction cost estimation, tender analysis, and cost control from real drawings. Karachi Hub. WhatsApp 0307-2963487.",
+    images: ["https://costcalculations.org/images/og-share-banner.jpg"],
   },
 };
 
@@ -174,6 +190,9 @@ export default function RootLayout({
             __html: FIRST_LAYER_LOCK_SCRIPT,
           }}
         />
+        <JsonLd data={getOrganizationSchema()} />
+        <JsonLd data={getWebSiteSchema()} />
+        <JsonLd data={getSiteNavigationSchema()} />
       </head>
       <body suppressHydrationWarning className="min-h-screen flex flex-col bg-white text-[#1F2937] antialiased selection:bg-[#FF8A00] selection:text-white pb-16 lg:pb-0">
         <Navbar />

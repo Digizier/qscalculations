@@ -51,7 +51,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

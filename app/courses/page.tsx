@@ -13,16 +13,49 @@ import {
   Laptop
 } from "lucide-react";
 import { COURSES } from "@/data/courses";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbSchema, BASE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Quantity Surveying Courses & Training Programs",
+  title: "Practical Quantity Surveying & BOQ Courses | Batch 2026 Enrollments",
   description:
     "Comprehensive practical training in Quantity Surveying, BOQ Preparation, Construction Cost Estimation, EVM, and Subcontractor Billing based on real Pakistani blueprints.",
+  alternates: {
+    canonical: "https://costcalculations.org/courses",
+  },
 };
 
 export default function CoursesPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: BASE_URL },
+    { name: "Courses & Training", url: `${BASE_URL}/courses` },
+  ]);
+
+  const courseListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Quantity Surveying Courses & Training Programs",
+    itemListElement: COURSES.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Course",
+        name: c.title,
+        description: c.shortDescription,
+        url: `${BASE_URL}/courses/${c.slug}`,
+        provider: {
+          "@type": "EducationalOrganization",
+          name: "Cost & Calculation's",
+          sameAs: BASE_URL,
+        },
+      },
+    })),
+  };
+
   return (
     <div className="bg-white">
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={courseListSchema} />
       {/* Page Header */}
       <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-16 text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">

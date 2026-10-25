@@ -25,6 +25,7 @@ import {
   Check
 } from "lucide-react";
 import { COURSES, CORE_SKILLS } from "@/data/courses";
+import HomeFaq from "@/components/HomeFaq";
 
 export default function HomePage() {
   const iconMap: { [key: string]: React.ReactNode } = {
@@ -456,6 +457,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* FREQUENTLY ASKED QUESTIONS (AEO & GOOGLE RICH SNIPPET OPTIMIZATION) */}
+      <HomeFaq />
 
       {/* FINAL CALL TO ACTION */}
       <section className="py-8 sm:py-12 md:py-16 bg-[#F4F7FB]">

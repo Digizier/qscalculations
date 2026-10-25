@@ -11,16 +11,43 @@ import {
   HelpCircle
 } from "lucide-react";
 import WhatsAppForm from "@/components/WhatsAppForm";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbSchema, getFaqSchema, BASE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Us & WhatsApp Inquiries | Cost & Calculation's",
+  title: "Contact Us & WhatsApp Inquiries | Cost & Calculation's Karachi",
   description:
     "Get in touch with Cost & Calculation's for Quantity Surveying courses, BOQ preparation, and construction cost consultancy. WhatsApp 0307-2963487.",
+  alternates: {
+    canonical: "https://costcalculations.org/contact",
+  },
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: BASE_URL },
+    { name: "Contact Us", url: `${BASE_URL}/contact` },
+  ]);
+
+  const contactFaqSchema = getFaqSchema([
+    {
+      question: "How do online classes take place?",
+      answer: "Our classes are conducted through practical screen-sharing sessions where we open actual construction drawings, demonstrate live quantity measurements in Excel, and review student calculation sheets with direct 1-on-1 feedback."
+    },
+    {
+      question: "Is this training suitable for DAE civil diploma holders?",
+      answer: "Yes, absolutely. A large portion of our students are DAE civil graduates and site supervisors aiming to transition from strenuous site work to office-based estimation, billing, and tender management roles."
+    },
+    {
+      question: "How can I hire your team for BOQ preparation for my private project?",
+      answer: "Simply message us on WhatsApp with your architectural and structural PDF drawing sets. We will review the drawings and send you a formal quotation and turnaround timeline within 24 hours."
+    }
+  ]);
+
   return (
     <div className="bg-white min-h-screen">
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={contactFaqSchema} />
       {/* Header Banner */}
       <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-16 text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">

@@ -165,7 +165,7 @@ export default function Footer() {
         {/* Bottom Copyright Bar */}
         <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-400 text-center sm:text-left">
           <p>
-            &copy; 2026 Cost &amp; Calculation&apos;s (QSCalculations.com). All rights reserved.
+            &copy; 2026 Cost &amp; Calculation&apos;s (CostCalculations.org). All rights reserved.
           </p>
           <div className="flex items-center gap-4 sm:gap-6">
             <Link href="/privacy-policy" className="hover:text-gray-200 transition-colors">

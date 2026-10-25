@@ -6,7 +6,10 @@ import { ShieldCheck, ArrowLeft } from "lucide-react";
 export const metadata: Metadata = {
   title: "Privacy Policy | Cost & Calculation's",
   description:
-    "Privacy Policy for Cost & Calculation's (QSCalculations.com). Learn how we protect student and client information.",
+    "Privacy Policy for Cost & Calculation's (CostCalculations.org). Learn how we protect student and client information.",
+  alternates: {
+    canonical: "https://costcalculations.org/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -30,7 +33,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-xs text-gray-500">
-            Last Updated: January 2026 &bull; Domain: QSCalculations.com
+            Last Updated: January 2026 &bull; Domain: CostCalculations.org
           </p>
         </div>
 
@@ -38,7 +41,7 @@ export default function PrivacyPolicyPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-[#0B1F3A]">1. Introduction</h2>
             <p>
-              At <strong>Cost &amp; Calculation&apos;s</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), operating the website <strong>https://QSCalculations.com</strong>, we are committed to respecting and protecting the privacy of our website visitors, students, and consultancy clients. This Privacy Policy outlines what information we collect, how it is used, and how your data is safeguarded.
+              At <strong>Cost &amp; Calculation&apos;s</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), operating the website <strong>https://costcalculations.org</strong>, we are committed to respecting and protecting the privacy of our website visitors, students, and consultancy clients. This Privacy Policy outlines what information we collect, how it is used, and how your data is safeguarded.
             </p>
           </section>
 

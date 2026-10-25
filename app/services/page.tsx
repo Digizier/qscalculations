@@ -22,14 +22,44 @@ import {
 } from "lucide-react";
 import { SERVICES, ServiceItem } from "@/data/services";
 import WhatsAppForm from "@/components/WhatsAppForm";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbSchema, BASE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Professional Construction Cost & Quantity Surveying Consultancy Services",
+  title: "Professional Construction Cost & Quantity Surveying Consultancy Services | Karachi",
   description:
     "Expert BOQ preparation, tender bidding evaluation, cost breakdown structures, earned value management, and subcontractor billing verification across Pakistan.",
+  alternates: {
+    canonical: "https://costcalculations.org/services",
+  },
 };
 
 export default function ServicesPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: BASE_URL },
+    { name: "Services & Consultancy", url: `${BASE_URL}/services` },
+  ]);
+
+  const serviceListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Quantity Surveying & Cost Consultancy Services",
+    itemListElement: SERVICES.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: s.title,
+        description: s.shortDesc,
+        provider: {
+          "@type": "ProfessionalService",
+          name: "Cost & Calculation's",
+          url: BASE_URL,
+        },
+      },
+    })),
+  };
+
   const iconMap: { [key: string]: React.ReactNode } = {
     FileSpreadsheet: <FileSpreadsheet className="w-7 h-7 text-[#1464C0]" />,
     Calculator: <Calculator className="w-7 h-7 text-[#1464C0]" />,
@@ -45,6 +75,8 @@ export default function ServicesPage() {
 
   return (
     <div className="bg-white">
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceListSchema} />
       {/* Header Banner */}
       <section className="bg-[#0B1F3A] text-white py-8 sm:py-12 md:py-16 text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">

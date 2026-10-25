@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { COURSES } from "@/data/courses";
 import WhatsAppForm from "@/components/WhatsAppForm";
+import JsonLd from "@/components/JsonLd";
+import { getCourseSchema, getBreadcrumbSchema, BASE_URL } from "@/lib/schema";
 
 interface CoursePageProps {
   params: Promise<{
@@ -44,6 +46,22 @@ export async function generateMetadata({
   return {
     title: `${course.title} | Cost & Calculation's`,
     description: course.shortDescription,
+    alternates: {
+      canonical: `${BASE_URL}/courses/${course.slug}`,
+    },
+    openGraph: {
+      title: `${course.title} | Cost & Calculation's`,
+      description: course.shortDescription,
+      url: `${BASE_URL}/courses/${course.slug}`,
+      images: [
+        {
+          url: `${BASE_URL}/images/og-share-banner.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `${course.title} - Cost & Calculation's`,
+        },
+      ],
+    },
   };
 }
 
@@ -55,8 +73,18 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
     notFound();
   }
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: BASE_URL },
+    { name: "Courses", url: `${BASE_URL}/courses` },
+    { name: course.title, url: `${BASE_URL}/courses/${course.slug}` },
+  ]);
+
+  const courseSchema = getCourseSchema(course);
+
   return (
     <div className="bg-white min-h-screen">
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={courseSchema} />
       {/* Breadcrumbs */}
       <div className="bg-[#F4F7FB] border-b border-gray-200 py-2.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
