@@ -61,7 +61,7 @@ async function processNewLogoAndAssets() {
       <text x="600" y="390" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Cost &amp; Calculation's</text>
       <text x="600" y="440" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#FF8A00" text-anchor="middle">QUANTITY SURVEYING &amp; COST ESTIMATION</text>
       <text x="600" y="485" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#38BDF8" text-anchor="middle">Training &amp; Consultancy • Practical BOQ • EVM • Tender Analysis</text>
-      <text x="600" y="545" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#25D366" text-anchor="middle">WhatsApp: 0307-2963487 • QSCalculations.com</text>
+      <text x="600" y="545" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#25D366" text-anchor="middle">WhatsApp: 0307-2963487 • CostCalculations.org</text>
     </svg>
   `);
 

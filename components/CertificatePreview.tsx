@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Award, ShieldCheck, Printer, CheckCircle2 } from "lucide-react";
 
 export default function CertificatePreview() {
-  const [recipientName, setRecipientName] = useState("Engr. Muhammad Hamza");
+  const [recipientName, setRecipientName] = useState("Muhammad Hamza");
 
   const handlePrint = () => {
     window.print();
@@ -62,7 +62,7 @@ export default function CertificatePreview() {
           <div className="flex flex-col items-center justify-center space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
             <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase font-bold text-gray-500">
               <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1464C0] shrink-0" />
-              <span>Online Engineering Training System &bull; Professional Competence</span>
+              <span>Online Engineering Training System &bull; Karachi, Pakistan</span>
               <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1464C0] shrink-0" />
             </div>
 
@@ -169,7 +169,7 @@ export default function CertificatePreview() {
                 </div>
               </div>
               <span className="text-[9px] sm:text-[10px] text-gray-500 mt-1 sm:mt-2 font-mono">
-                Reg ID: CC-QS-PK-2026-SAMPLE
+                Reg ID: CC-QS-PK-2026-8492 &bull; CostCalculations.org
               </span>
             </div>
 
