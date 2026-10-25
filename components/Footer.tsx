@@ -155,7 +155,7 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-[#FF8A00] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-gray-400 uppercase tracking-wider">Location</span>
-                  <span>Lahore, Pakistan</span>
+                  <span>Karachi, Pakistan</span>
                 </div>
               </div>
             </div>

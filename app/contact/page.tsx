@@ -131,7 +131,7 @@ export default function ContactPage() {
                     Hub
                   </span>
                   <p className="text-xs sm:text-sm font-bold text-[#0B1F3A] mt-0.5">
-                    Lahore, Pakistan
+                    Karachi, Pakistan
                   </p>
                 </div>
                 <p className="text-[10px] sm:text-xs text-gray-500 mt-1 hidden sm:block">

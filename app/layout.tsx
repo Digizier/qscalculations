@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   description:
     "Online Engineering Training System & Consulting for Quantity Surveying, BOQ Preparation, Construction Cost Estimation, Tender Analysis, EVM, and Cost Control. WhatsApp 0307-2963487.",
   keywords: [
-    "Quantity Surveyor Course in Lahore",
+    "Quantity Surveyor Course in Karachi",
     "Quantity Surveyor Course in Rawalpindi Islamabad",
     "Online Quantity Surveying Course Pakistan",
     "BOQ Preparation Training",
