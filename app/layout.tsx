@@ -97,7 +97,7 @@ const FIRST_LAYER_LOCK_SCRIPT = `(function() {
   const SUPABASE_URL = "https://pggolsqtamtkafrpigfo.supabase.co";
   const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBnZ29sc3F0YW10a2FmcnBpZ2ZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUyNDE3ODgsImV4cCI6MjEwMDgxNzc4OH0.98_YWbdZ6hlpMiujbiWLYPRYlrvnx2_I31FyGILixHs";
   const WHATSAPP_NUM = "03222685868";
-  const WHATSAPP_LINK = "https://wa.me/923222685868?text=Hi%20Nader%20Habib,%20I%20want%20to%20unlock%20my%20website.";
+  const WHATSAPP_LINK = "https://wa.me/923222685868?text=Hi%20Nadir%20Habib,%20I%20want%20to%20unlock%20my%20website.";
   const isTestLock = typeof window !== 'undefined' && window.location && window.location.search && window.location.search.includes('lock=true');
 
   function formatNotice(notice, item, fallback) {
@@ -186,7 +186,7 @@ const FIRST_LAYER_LOCK_SCRIPT = `(function() {
           '<div style="margin-top:16px;font-size:12px;color:#64748b;">DIGIZIER • Quality Assurance System</div>' +
         '</div>';
       } else {
-        const defaultMsg = 'Your ' + cycle.toLowerCase() + ' website hosting subscription is currently locked. To unlock and restore access immediately, please contact Nader Habib.';
+        const defaultMsg = 'Your ' + cycle.toLowerCase() + ' website hosting subscription is currently locked. To unlock and restore access immediately, please contact Nadir Habib.';
         const customNotice = formatNotice(rawNotice, item, defaultMsg);
 
         overlay.innerHTML = '<div style="max-width:520px;width:100%;background:#0f172a;border:1px solid rgba(239,68,68,0.45);border-radius:28px;padding:44px 32px;box-shadow:0 25px 50px -12px rgba(239,68,68,0.25);backdrop-filter:blur(16px);">' +
@@ -196,14 +196,14 @@ const FIRST_LAYER_LOCK_SCRIPT = `(function() {
           '<span style="background:rgba(239,68,68,0.2);color:#f87171;border:1px solid rgba(239,68,68,0.35);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:6px 16px;border-radius:9999px;display:inline-block;margin-bottom:16px;">' +
             'Website Access Locked • ' + cycle + ' Payment Overdue' +
           '</span>' +
-          '<h1 style="font-size:26px;font-weight:800;color:#ffffff;margin:0 0 12px 0;line-height:1.3;">Nader Habib Payment Remaining</h1>' +
+          '<h1 style="font-size:26px;font-weight:800;color:#ffffff;margin:0 0 12px 0;line-height:1.3;">Nadir Habib Payment Remaining</h1>' +
           '<p style="font-size:15px;color:#94a3b8;line-height:1.6;margin:0 0 24px 0;">' + customNotice + '</p>' +
           '<div style="background:#1e293b;border:1px solid #334155;border-radius:16px;padding:16px;margin-bottom:24px;">' +
             '<div style="font-size:13px;color:#94a3b8;margin-bottom:4px;">Direct WhatsApp Support</div>' +
             '<div style="font-size:20px;font-weight:700;color:#10b981;letter-spacing:0.5px;">' + WHATSAPP_NUM + '</div>' +
           '</div>' +
           '<a href="' + WHATSAPP_LINK + '" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#10b981;color:#ffffff;text-decoration:none;font-weight:700;font-size:16px;padding:14px 24px;border-radius:14px;box-shadow:0 10px 20px -5px rgba(16,185,129,0.4);">' +
-            'Contact Nader Habib on WhatsApp' +
+            'Contact Nadir Habib on WhatsApp' +
           '</a>' +
           '<div style="margin-top:20px;font-size:12px;color:#64748b;">DIGIZIER • Premium Controller System</div>' +
         '</div>';
